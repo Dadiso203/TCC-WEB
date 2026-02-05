@@ -1,0 +1,72 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title> Log in/Sing Up</title>
+        <meta charset=""UTF-8>
+        <meta name="viewport" content="width=device-width initial_scale=1.0">
+        <style>
+            body{
+                background-color:darkolivegreen;
+                color: white;
+            }
+            ul {
+                list-style-type: none;
+                padding: 0;
+                margin: 0;
+                overflow: hidden;
+                 background-color: peru;
+            }
+            li{
+                float:left;
+                
+            }
+            li a{
+                display:inline-block;
+                color: white;
+                padding: 20px 20px;
+                text-align: center;
+                text-decoration: none;
+            }
+            li a:active, li a:hover{
+                color: black
+            }
+            img {
+                padding: 70px 600px;
+                width: 80px;
+                height: 80px;
+                border-radius: 50px;
+            }
+            #log{
+                text-align: center;
+                font-size: 25px;
+            }
+            #lgb{
+                background-color: peru;
+                color: white;
+                padding: 15px;
+                border: 0;
+                margin: 15px;
+            }
+        </style>
+    </head>
+    <body>
+        <ul>
+            <li><a href="#home">Home</a></li>
+            <li><a href="#Services">Services</a></li>
+            <li><a href="#Packages">Packages</a></li>
+            <li><a href="#Blog">Log in</a></li>
+            <li><a href="#About us">About us</a></li>
+            <li><a href="#Contact us">Contact us</a></li>
+        </ul><br>
+        <img src="/home/dadiso/Desktop/W3-PROJECTS/HTML AND CSS/img_avatar2.png" alt="Avatar">
+        <form method="post" target="_blank" id="log">
+            <label for="uname">Enter User Name</label><br>
+            <input type="text" id="uname" name="uname" placeholder="Enter Username"><br>
+            <label for="psw"> Enter Passcode</label><br>
+        <input type="text" id="psw" name="psw" placeholder ="Enter Passowrd"><br>
+            <input type="Submit" name="Log In" value="Log In" id="lgb">
+
+        </form>
+
+    </body>
+</html>

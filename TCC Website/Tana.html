@@ -1,0 +1,398 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="Tax Consultancy firm">
+    <meta name="keywords" content="Tax, Consultancy, firm, accounting">
+    <title>Tax Compliance Chiefs Zimbabwe</title>
+    <link rel="icon" type="image/x-icon" href="/home/dadiso/Desktop/W3-PROJECTS/HTML AND CSS/TCC Website/favicon.ico">
+    <style>
+        /* RESET & BASE STYLES */
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+        
+        body {
+            font-family: Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;
+            background-color: #2c3e50;
+            color: white;
+            line-height: 1.6;
+        }
+        
+        /* HEADER FIX */
+        .header-container {
+            background-color: #34495e;
+            padding: 20px 40px;
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+            border-bottom: 5px solid peru;
+        }
+        
+        .logo-section {
+            display: flex;
+            align-items: center;
+            gap: 20px;
+        }
+        
+        .logo-text {
+            font-family: cursive;
+            font-size: 3.5rem;
+            font-weight: bold;
+            color: white;
+            letter-spacing: 3px;
+        }
+        
+        .logo-text span {
+            display: inline-block;
+            padding: 5px;
+        }
+        
+        .logo-text .t { color: white }
+        .logo-text .c1 { color: white; }
+        .logo-text .c2 { color: white; }
+        
+        .company-name {
+            text-align: center;
+            flex: 1;
+        }
+        
+        .full-name {
+            font-size: 1.8rem;
+            color: white;
+            margin-bottom: 5px;
+        }
+        
+        .full-name span {
+            background-color: peru;
+            padding: 2px 5px;
+            margin: 0 2px;
+        }
+        
+        .motto {
+            font-size: 1.2rem;
+            color: #ecf0f1;
+            font-style: italic;
+        }
+        
+        /* NAVIGATION FIX */
+        .main-nav {
+            background-color: peru;
+            overflow: hidden;
+        }
+        
+        .nav-list {
+            list-style-type: none;
+            display: flex;
+            justify-content: center;
+        }
+        
+        .nav-list li {
+            float: none; /* Remove float */
+        }
+        
+        .nav-list li a {
+            color: white;
+            padding: 15px 25px;
+            text-decoration: none;
+            font-size: 1.2rem;
+            display: block;
+            transition: all 0.3s ease;
+        }
+        
+        .nav-list li a:hover {
+            background-color: darkgoldenrod;
+            color: #000;
+        }
+        
+        /* CONTENT SECTIONS */
+        .hero {
+            text-align: center;
+            padding: 40px 20px;
+            background: linear-gradient(rgba(44, 62, 80, 0.9), rgba(44, 62, 80, 0.9));
+        }
+        
+        .hero h1 {
+            font-size: 2.5rem;
+            color: #f39c12;
+            margin-bottom: 20px;
+        }
+        
+        .hero p {
+            font-size: 1.3rem;
+            max-width: 800px;
+            margin: 0 auto 30px;
+        }
+        
+        /* SERVICES SECTIONS */
+        .services-container {
+            display: flex;
+            flex-wrap: wrap;
+            justify-content: center;
+            gap: 30px;
+            padding: 40px 20px;
+            max-width: 1200px;
+            margin: 0 auto;
+        }
+        
+        .service-box {
+            flex: 1;
+            min-width: 300px;
+            max-width: 500px;
+            background-color: #34495e;
+            padding: 25px;
+            border-radius: 8px;
+            border-left: 5px solid peru;
+        }
+        
+        .service-box h2 {
+            color: #f39c12;
+            margin-bottom: 20px;
+            font-size: 1.8rem;
+        }
+        
+        .service-list {
+            list-style-type: disc;
+            padding-left: 20px;
+        }
+        
+        .service-list li {
+            margin-bottom: 10px;
+            font-size: 1.1rem;
+        }
+        
+        /* CTA BUTTON */
+        .cta-container {
+            text-align: center;
+            padding: 40px 20px;
+            background-color: #1a252f;
+        }
+        
+        .cta-button {
+            display: inline-block;
+            background-color: peru;
+            color: white;
+            padding: 15px 40px;
+            font-size: 1.3rem;
+            text-decoration: none;
+            border-radius: 5px;
+            margin: 20px 0;
+            transition: all 0.3s ease;
+            border: none;
+            cursor: pointer;
+        }
+        
+        .cta-button:hover {
+            background-color: darkgoldenrod;
+            transform: translateY(-3px);
+            box-shadow: 0 5px 15px rgba(0,0,0,0.3);
+        }
+        /*MVC-Container*/
+
+        .mvc-container {
+            background-color: #2c3e50;
+            padding: 40px 20px;
+            display: flex;
+            flex-wrap: wrap;
+            justify-content:center;
+            margin: 30px;
+        }
+        .vission-box {
+            flex: 1;
+            border-radius: 5px;
+            border-top: 5px solid peru;
+        }
+        .vission-box h1 {
+            color:#f39c12;
+        }
+        .mission-box {
+            flex: 1;
+            border-left: 5px solid peru;
+            border-bottom: 5px solid peru;
+            
+        }
+        .mission-box h1 {
+            color:#f39c12;
+        }
+        .coreValues-box {
+            flex: 1;
+            border-left: 5px solid peru;
+            border-top: 5px solid peru;
+        }
+        .coreValues-box h1 {
+            color:#f39c12;
+        }
+        .coreValues-box li {
+            list-style-type: none;
+        }
+
+        /* FOOTER */
+        footer {
+            background-color: #2c3e50;
+            padding: 30px 20px;
+            text-align: center;
+            border-top: 3px solid peru;
+        }
+        
+        .contact-info {
+            font-size: 1.2rem;
+            line-height: 2;
+        }
+        
+        .contact-info a {
+            color: #3498db;
+            text-decoration: none;
+        }
+        
+        .contact-info a:hover {
+            text-decoration: underline;
+        }
+        
+        /* RESPONSIVE DESIGN */
+        @media (max-width: 768px) {
+            .header-container {
+                flex-direction: column;
+                text-align: center;
+                padding: 20px;
+            }
+            
+            .logo-section {
+                flex-direction: column;
+                margin-bottom: 20px;
+            }
+            
+            .logo-text {
+                font-size: 2.5rem;
+            }
+            
+            .nav-list {
+                flex-direction: column;
+            }
+            
+            .nav-list li a {
+                padding: 12px;
+            }
+            
+            .services-container {
+                flex-direction: column;
+                align-items: center;
+            }
+            
+            .hero h1 {
+                font-size: 2rem;
+            }
+        }
+    </style>
+</head>
+<body>
+    <!-- FIXED HEADER SECTION -->
+    <div class="header-container">
+        <div class="logo-section">
+            <div class="logo-text">
+                <span class="t">T</span><span class="c1">C</span><span class="c2">C</span>
+            </div>
+            <div class="company-name">
+                <div class="full-name">
+                    <span>T</span>AX <span>C</span>OMPLIANCE <span>C</span>HIEFS
+                </div>
+                <div class="motto">For All Your Brilliant Business Solutions</div>
+            </div>
+        </div>
+    </div>
+    
+    <!-- MAIN NAVIGATION -->
+    <nav class="main-nav">
+        <ul class="nav-list">
+            <li><a href="#home">Home</a></li>
+            <li><a href="#services">Services</a></li>
+            <li><a href="#packages">Packages</a></li>
+            <li><a href="/home/dadiso/Desktop/W3-PROJECTS/HTML AND CSS/TCC Website/TCClogIn.html">Log In</a></li>
+            <li><a href="#about">About Us</a></li>
+            <li><a href="#contact">Contact Us</a></li>
+        </ul>
+    </nav>
+    
+    <!-- HERO SECTION -->
+    <section class="hero">
+        <h1>Stress-Free Tax Solutions for Individuals and Small Businesses</h1>
+        <p>
+            We handle your taxes accurately and on time, so you can focus on what matters.
+        </p>
+    </section>
+    
+    <!-- SERVICES SECTIONS -->
+    <div class="services-container">
+        <div class="service-box">
+            <h2>Our Key Services</h2>
+            <ul class="service-list">
+                <li>Personal Tax Preparation & Filing</li>
+                <li>Small Business & Self-Employed Tax Services</li>
+                <li>Tax Planning & Strategy</li>
+                <li>IRS Audit Support & Representation</li>
+                <li>Bookkeeping & Accounting Assistance</li>
+                <li>Consultation Calls</li>
+            </ul>
+        </div>
+        
+        <div class="service-box">
+            <h2>Why Choose Us?</h2>
+            <ul class="service-list">
+                <li>Personalized 1-on-1 Service</li>
+                <li>Years of Experience in Tax Clearance</li>
+                <li>Free Initial Consultation</li>
+                <li>Always Up-to-Date with Latest Tax Laws</li>
+                <li>Certified Tax Consultants</li>
+                <li>Secure & Confidential Service</li>
+            </ul>
+        </div>
+    </div>
+
+     <!--Mission, Vission, Core Values Container-->
+    <div class="mvc-container">
+        <div class="vission-box">
+            <h1>Vission</h1>
+            <p><strong>To be Zimbabwe's leading tax consultancy, making compliance simple and stress-free for every taxpayer.</strong></p>
+        </div>
+
+        <div class="mission-box">
+            <h1>Mission</h1>
+            <p><strong>To provide accurate, personalized tax solutions that empower individuals and businesses to thrive with confidence.</strong></p>
+        </div>
+
+        <div class="coreValues-box">
+            <h1>Our core values include:</h1>
+            <ul class="coreValues-list">
+                <li><b>Integrity</b> - We are honest, transparent, and ethical in all we do.</li>
+                <li><b>Expertise</b> - We stay updated on tax laws to provide the best advice.</li>
+                <li><b>Client-Focused</b> - Your needs and success come first.</li>
+                <li><b>Reliability</b> - Consistent, dependable service you can count on.</li>
+                <li><b>Confidentiality</b> - Your financial information is safe with us.</li>
+            </ul>
+        </div>
+    </div>
+    
+    <!-- CALL TO ACTION -->
+    <div class="cta-container">
+        <button class="cta-button">Book a Free Consultation</button>
+        <p style="margin-top: 20px; font-size: 1.2rem;">
+            <a href="#services" style="color: peru; text-decoration: underline;">View Our Services</a>
+        </p>
+    </div>
+   
+    <!-- FOOTER -->
+    <footer>
+        <div class="contact-info">
+            <h3>Tax Compliance Chiefs</h3>
+            <p>📍 Location: Harare, Zimbabwe</p>
+            <p>✉️ Email: <a href="mailto:taxcompliancechiefszim@gmail.com">taxcompliancechiefszim@gmail.com</a></p>
+            <p>📞 Phone: +263 775 312 954 | +263 718 101 122</p>
+            <p style="margin-top: 20px; font-size: 0.9rem; color: #bdc3c7;">
+                © 2024 Tax Compliance Chiefs. All rights reserved.
+            </p>
+        </div>
+    </footer>
+</body>
+</html>
