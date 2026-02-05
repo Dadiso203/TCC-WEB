@@ -22,7 +22,7 @@ This is a responsive website for a tax consultancy firm, featuring:
 - Modern design
 
 ## How to View
-1. Clone repository: `git clone https://github.com/DADISO203/tax-consultancy-website.git`
+1. Clone repository: `git clone https://github.com/DADISO203/TCC-WEB.git`
 2. Open `index.html` in browser
 
 ## Author
