@@ -26,7 +26,7 @@ This is a responsive website for a tax consultancy firm, featuring:
 2. Open `index.html` in browser
 
 ## Author
-Dadiso Tafirei - First Year Computer Science Student
+Dadiso Tafirei -  Computer Science Student
 
 ## License
 This project is for educational purposes.
