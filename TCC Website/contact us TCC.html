@@ -118,26 +118,28 @@
           color:black;
           padding: 20px 20px;
           
+          text-align: left;
+          
         }
         .nameItem {
-          background-color:gray;
+          
           flex: 1, 1, 0;
           padding: 15px 25px;
-          border-left: 5px solid peru;
+          
 
         }
         .locationItem {
-          background-color:gray;
+          /*background-color:gray;*/
           flex: 1, 1, 250px;
           padding: 20px 40px;
-          border-left: 5px solid peru;
+          
           
         }
         .telItem {
-          background-color:gray;
+          /*background-color:gray;*/
           flex: 1, 1, 250px;
           padding: 15px 25px;
-          border-left: 5px solid peru;
+         
         }
 
         /* Footer*/
@@ -164,9 +166,12 @@
             }
         
 
-          form {
-            background-color: lawngreen;
-            align-items: center;
+          
+          .formContainer {
+            display: flex;
+            flex-direction: column;
+            align-items:center;
+            padding: 50px 40px;
           }
 
           <!--Footer-->
@@ -237,7 +242,7 @@
           </div>
 
           <div class="locationItem">
-            12B Rudland Avenue<br> 
+            &#128205 12B Rudland Avenue<br> 
             Belvedere Harare Zimbabwe
 
           </div>
@@ -252,11 +257,17 @@
         <p>
           <!--Inquiry Form-->
           <form action="#tbd" class="formContainer">
-            <label for="idy"> Enter email</label><br>
-            <input id="idy" type="email" required><br>
-            <textarea name="inquiry" id="inquiry " rows="10" cols="50">Enter your quiry here</textarea>
-            <input type="submit">
-
+            <div class="eml">
+                <label for="idy"> Enter email</label><br>
+                <input id="idy" type="email" required><br>
+            </div>
+            <div class="txt">
+                <textarea name="inquiry" id="inquiry " rows="10" cols="50">Enter your quiry here</textarea>
+            </div>
+            <div class="sbt">
+                <input type="submit">
+            </div>
+            
           </form>
         </p>
         
