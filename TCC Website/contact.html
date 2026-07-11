@@ -1,0 +1,286 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <title>Contact Us</title>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <style>
+          * {
+            margin:0;
+            padding: 0;
+            box-sizing: border-box;
+
+          }
+          
+          .header-container {
+            background-color: #34495e;
+            padding: 20px 40px;
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+            border-bottom: 5px solid peru;
+        }
+        
+        .logo-section {
+            background-color: #34495e;
+            display: flex;
+            align-items: center;
+            gap: 400px;
+        }
+        
+        .logo-text {
+            font-family: cursive;
+            font-size: 3.9rem;
+            font-weight: bold;
+            color: white;
+            letter-spacing: 3px;
+        }
+        
+        .logo-text span {
+            display: inline-block;
+            padding: 5px;
+        }
+        
+        .logo-text .t { color: white }
+        .logo-text .c1 { color: white; }
+        .logo-text .c2 { color: white; }
+        
+        .company-name {
+            display: flex;
+            justify-content: center;
+            text-align: center;
+            gap: 200px;
+            flex: 1;
+        }
+        
+        .full-name {
+            font-size: 1.8rem;
+            color: white;
+            margin-bottom: 5px;
+        }
+        
+        .full-name span {
+            background-color: peru;
+            padding: 2px 5px;
+            margin: 0 2px;
+        }
+        
+        .motto {
+            display: flex;
+            justify-content: flex-end;
+            font-size: 2.0rem;
+            color: #ecf0f1;
+            font-style: italic;
+        }
+        /*Navigation*/
+        .main-nav {
+            background-color: peru;
+            overflow: hidden;
+        }
+        
+        .nav-list {
+            list-style-type: none;
+            display: flex;
+            justify-content: center;
+        }
+        
+        .nav-list li {
+            float: none; /* Remove float */
+        }
+        
+        .nav-list li a {
+            color: white;
+            padding: 15px 15px;
+            text-decoration: none;
+            font-size: 1.2rem;
+            display: block;
+            transition: all 0.3s ease;
+        }
+        
+        .nav-list li a:hover {
+            background-color: darkgoldenrod;
+            color: #000;
+        }
+        /*body*/
+        body {
+            font-family: Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;
+            background-color: whitesmoke;
+            color: black;
+            line-height: 1.6;
+            
+        }
+        .contactContainer {
+          display:flex;
+          font-size: 1.8rem;
+          flex-direction: column;
+          align-items: center;
+          justify-content: space-evenly;
+          color:black;
+          padding: 20px 20px;
+          
+          text-align: left;
+          
+        }
+        .nameItem {
+          
+          flex: 1, 1, 0;
+          padding: 15px 25px;
+          
+
+        }
+        .locationItem {
+          /*background-color:gray;*/
+          flex: 1, 1, 250px;
+          padding: 20px 40px;
+          
+          
+        }
+        .telItem {
+          /*background-color:gray;*/
+          flex: 1, 1, 250px;
+          padding: 15px 25px;
+         
+        }
+
+        /* Footer*/
+            footer {
+                background-color: #34495e;
+                text-align: center;
+                border-top: 3px solid peru;
+                padding: 30px 40px;
+
+            }
+            .contact-info {
+            font-size: 1.2rem;
+            line-height: 2;
+            color: white;
+            }
+        
+            .contact-info a {
+                color: #3498db;
+                text-decoration: none;
+            }
+        
+            .contact-info a:hover {
+                text-decoration: underline;
+            }
+        
+
+          
+          .formContainer {
+            display: flex;
+            flex-direction: column;
+            align-items:center;
+            padding: 50px 40px;
+          }
+
+          <!--Footer-->
+
+          
+            ul {
+              overflow: hidden;
+              background-color: peru;
+              list-style-type: none;
+              margin: 0;
+              padding: 0;
+            }
+            li {
+              float: left;
+              font-size: 25px;
+            }
+            li a{
+              color: white ;
+              padding: 15px;
+              text-decoration: none;
+              text-align: center;
+
+            }
+            li a:hover {
+              color: #000;
+            }
+            #p01 {
+                text-align: center;
+                font-size: 25px;
+                
+            }
+
+        </style>
+
+    </head>
+    
+       <header>
+            <!--Header Content-->
+            <div class="header-container">
+                <div class="logo-section">
+                    <div class="logo-text">
+                        <span class="t">T</span><span class="c1">C</span><span class="c2">C</span>
+                    </div>
+                <div class="company-name">
+                    <div class="full-name">
+                        <span>T</span>AX <span>C</span>OMPLIANCE <span>C</span>HIEFS
+                    </div>
+                <div class="motto" style="align-self: self-end;">For All Your Brilliant Business Solutions</div>
+            </div>
+        </div>
+    </div>
+        </header>
+        <nav class="main-nav">
+            <ul class="nav-list">
+            <li><a href="Tana.html">Home</a></li>
+            <li><a href="Tana.html#services">Services</a></li>
+            <li><a href="Tana.html#packages">Packages</a></li>
+            <li><a href="TCClogIn.html">Log In</a></li>
+            <li><a href="Tana.html#about">About Us</a></li>
+            <li><a href="contact.html">Contact Us</a></li>
+            </ul><br>
+        </nav>
+      <body>
+        <p>
+        <div class="contactContainer">
+          <div class="nameItem">
+              Tax Compliance Chiefs
+          </div>
+
+          <div class="locationItem">
+            &#128205 12B Rudland Avenue<br> 
+            Belvedere Harare Zimbabwe
+
+          </div>
+
+          <div class="telItem">
+            &#128222 0775312954/0718101122
+
+          </div>
+
+        </div>
+        </p>
+        <p>
+          <!--Inquiry Form-->
+          <form action="#tbd" class="formContainer">
+            <div class="eml">
+                <label for="idy"> Enter email</label><br>
+                <input id="idy" type="email" required><br>
+            </div>
+            <div class="txt">
+                <textarea name="inquiry" id="inquiry" rows="10" cols="50">Enter your inquiry here</textarea>
+            </div>
+            <div class="sbt">
+                <input type="submit">
+            </div>
+            
+          </form>
+        </p>
+        
+    </body>
+    <footer>
+            <div class="contact-info">
+            <h3>Tax Compliance Chiefs</h3>
+            <p>📍 Location: Harare, Zimbabwe</p>
+            <p>✉️ Email: <a href="mailto:taxcompliancechiefszim@gmail.com">taxcompliancechiefszim@gmail.com</a></p>
+            <p>📞 Phone: +263 775 312 954 | +263 718 101 122</p>
+            <p style="margin-top: 20px; font-size: 0.9rem; color: #bdc3c7;">
+                © 2024 Tax Compliance Chiefs. All rights reserved.
+            </p>
+            </div>
+      </footer>
+</html>
