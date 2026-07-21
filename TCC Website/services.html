@@ -133,37 +133,103 @@
             color: #000;
         }
 
-        .taxServices {
-            padding: 40px 20px;
-            text-align: right;
-            background-color: grey;
+        li {
+            list-style:none;
         }
 
         .taxServices {
             padding: 40px 20px;
-            text-align: right;
-            background-color: grey;
+            font-size:large;
+            text-align: left;
+            background-color: hsla(0, 0%, 50%, 0.1);
+            border-radius: 8px;
+            border: 3px solid peru;
         }
+
 
         .taxPackages {
             padding: 40px 20px;
-            text-align: left;
-            background-color: green;
+            text-align: right;
+            font-size:large;
+            background-color: hsla(120, 100%, 50%, 0.1);
+            border-radius: 8px;
+            border: 3px solid peru;
         }
 
         .accountingFinReport {
             padding: 40px 20px;
-            text-align: right;;
-            background-color: blue;
+            text-align: left;
+            font-size:large;
+            background-color: hsla(181, 100%, 53%, 0.1);
+            border-radius: 8px;
+            border: 3px solid peru;
         }
 
         .corporateSecretarialServices {
             padding: 40px 20px;
-            text-align: left;
-            background-color: orange;
+            text-align: right;
+            font-size:large;
+            background-color: hsla(38, 39%, 34%, 0.163);
+            border-radius: 8px;
+            border: 3px solid peru;
         }
 
+        /* Main container */
+.containerMain {
+    display: flex;
+    flex-direction: column;
+    gap: 2rem;
+    margin: 2rem auto;
+    max-width: 1200px;
+    padding: 0 1.5rem;
+}
 
+/* Each service card */
+.containerMain > * {
+    opacity: 0; /* hidden initially */
+    animation: swoopIn 1s ease forwards;
+    padding: 2rem;
+    border-radius: 12px;
+    border: 3px solid peru;
+}
+
+/* Delay each card so they appear one after another */
+.containerMain > *:nth-child(1) { animation-delay: 0.1s; }
+.containerMain > *:nth-child(2) { animation-delay: 0.4s; }
+.containerMain > *:nth-child(3) { animation-delay: 0.7s; }
+.containerMain > *:nth-child(4) { animation-delay: 1.0s; }
+
+/* Left-aligned cards swoop from the left */
+.containerMain > *:nth-child(odd) {
+    animation-name: swoopFromLeft;
+}
+
+/* Right-aligned cards swoop from the right */
+.containerMain > *:nth-child(even) {
+    animation-name: swoopFromRight;
+}
+
+@keyframes swoopFromLeft {
+    0% {
+        opacity: 0;
+        transform: translateX(-80px);
+    }
+    100% {
+        opacity: 1;
+        transform: translateX(0);
+    }
+}
+
+@keyframes swoopFromRight {
+    0% {
+        opacity: 0;
+        transform: translateX(80px);
+    }
+    100% {
+        opacity: 1;
+        transform: translateX(0);
+    }
+}
 
         footer {
             background-color: #2c3e50;
@@ -274,6 +340,9 @@
                 font-size: 0.92rem;
             }
         }
+
+        
+
     </style>
 </head>
      <body>
@@ -295,17 +364,18 @@
     <!-- MAIN NAVIGATION -->
     <nav class="main-nav">
         <ul class="nav-list">
-            <li><a href="Tana.html">Home</a></li>
-            <li><a href="#services">Services</a></li>
+            <li><a href="index.html">Home</a></li>
+            <li><a href="services.html#services">Services</a></li>
             <li><a href="TCClogIn.html">Log In</a></li>
-            <li><a href="#about">About Us</a></li>
+            <li><a href="index.html#about">About Us</a></li>
             <li><a href="contact.html">Contact Us</a></li>
         </ul>
     </nav>
 
     <!-- MAIN CONTENT -->
+     <div class="containerMain">
      <div class="taxServices">
-        <h1>Our Tax Services include：</h1>
+        <h1>Our Tax Services include： </h1>
         <ul>
             <li>Tax Computations</li>
             <li>Tax Returns Filing</li>
@@ -315,6 +385,7 @@
             <li>Tax Reviews</li>
         </ul>
      </div>
+     
 
      <div class="taxPackages">
         <h1>Our Tax Packages include：</h1>
@@ -349,5 +420,18 @@
 
      </div>
 
+     </div>
+     <!-- FOOTER -->
+    <footer>
+        <div class="contact-info">
+            <h3>Tax Compliance Chiefs</h3>
+            <p>📍 Location: Harare, Zimbabwe</p>
+            <p>✉️ Email: <a href="mailto:taxcompliancechiefszim@gmail.com">taxcompliancechiefszim@gmail.com</a></p>
+            <p>📞 Phone: +263 775 312 954 | +263 718 101 122</p>
+            <p style="margin-top: 20px; font-size: 0.9rem; color: #bdc3c7;">
+                © 2024 Tax Compliance Chiefs. All rights reserved.
+            </p>
+        </div>
+    </footer>
      </body>
 </html>
