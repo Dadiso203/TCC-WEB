@@ -6,206 +6,292 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <style>
       * {
-        margin:0;
+        margin: 0;
         padding: 0;
         box-sizing: border-box;
       }
-      
+
+      html {
+        scroll-behavior: smooth;
+      }
+
+      body {
+        font-family: Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;
+        background-color: whitesmoke;
+        color: #111;
+        line-height: 1.6;
+        min-height: 100vh;
+      }
+
       .header-container {
         background-color: #34495e;
-        padding: 20px 40px;
+        padding: 24px 28px;
         display: flex;
         align-items: center;
         justify-content: space-between;
         border-bottom: 5px solid peru;
-    }
-    
-    .logo-section {
-        background-color: #34495e;
+        flex-wrap: wrap;
+        gap: 18px;
+      }
+
+      .logo-section {
         display: flex;
         align-items: center;
-        gap: 400px;
-    }
-    
-    .logo-text {
+        gap: 18px;
+        flex: 1;
+        min-width: 220px;
+        flex-wrap: wrap;
+        justify-content: center;
+      }
+
+      .logo-text {
         font-family: cursive;
-        font-size: 3.9rem;
+        font-size: clamp(2rem, 4vw, 3.5rem);
         font-weight: bold;
         color: white;
         letter-spacing: 3px;
-    }
-    
-    .logo-text span {
+        white-space: nowrap;
+      }
+
+      .logo-text span {
         display: inline-block;
         padding: 5px;
-    }
-    
-    .logo-text .t { color: white }
-    .logo-text .c1 { color: white; }
-    .logo-text .c2 { color: white; }
-    
-    .company-name {
+      }
+
+      .company-name {
         display: flex;
+        flex-direction: column;
         justify-content: center;
         text-align: center;
-        gap: 200px;
+        gap: 8px;
         flex: 1;
-    }
-    
-    .full-name {
-        font-size: 1.8rem;
+        min-width: 220px;
+      }
+
+      .full-name {
+        font-size: clamp(1.1rem, 2vw, 1.8rem);
         color: white;
-        margin-bottom: 5px;
-    }
-    
-    .full-name span {
+        margin-bottom: 0;
+        line-height: 1.2;
+      }
+
+      .full-name span {
         background-color: peru;
         padding: 2px 5px;
         margin: 0 2px;
-    }
-    
-    .motto {
-        display: flex;
-        justify-content: flex-end;
-        font-size: 2.0rem;
+      }
+
+      .motto {
+        font-size: clamp(1rem, 1.2vw, 1.8rem);
         color: #ecf0f1;
         font-style: italic;
-    }
-    /*Navigation*/
-    .main-nav {
+        max-width: 420px;
+        margin: 0 auto;
+      }
+
+      .main-nav {
         background-color: peru;
-        overflow: hidden;
-    }
-    
-    .nav-list {
-        list-style-type: none;
+      }
+
+      .nav-list {
+        list-style: none;
         display: flex;
+        flex-wrap: wrap;
         justify-content: center;
-    }
-    
-    .nav-list li {
+        align-items: center;
+        gap: 8px;
+        padding: 12px 0;
+      }
+
+      .nav-list li {
         float: none;
-    }
-    
-    .nav-list li a {
+      }
+
+      .nav-list li a {
         color: white;
-        padding: 15px 15px;
+        padding: 12px 16px;
         text-decoration: none;
-        font-size: 1.2rem;
+        font-size: 1rem;
         display: block;
-        transition: all 0.3s ease;
-    }
-    
-    .nav-list li a:hover {
+        transition: all 0.25s ease;
+        border-radius: 6px;
+      }
+
+      .nav-list li a:hover {
         background-color: darkgoldenrod;
         color: #000;
-    }
-    /*body*/
-    body {
-        font-family: Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;
-        background-color: whitesmoke;
-        color: black;
-        line-height: 1.6;
-    }
-    .contactContainer {
-      display:flex;
-      font-size: 1.8rem;
-      flex-direction: column;
-      align-items: center;
-      justify-content: space-evenly;
-      color:black;
-      padding: 20px 20px;
-      text-align: left;
-    }
-    .nameItem {
-      flex: 1 1 0;
-      padding: 15px 25px;
-    }
-    .locationItem {
-      flex: 1 1 250px;
-      padding: 20px 40px;
-    }
-    .telItem {
-      flex: 1 1 250px;
-      padding: 15px 25px;
-    }
+      }
 
-    /* Footer*/
-    footer {
+      .contactContainer {
+        display: grid;
+        grid-template-columns: repeat(auto-fit, minmax(240px, 1fr));
+        gap: 20px;
+        font-size: 1rem;
+        padding: 32px 20px;
+        color: #111;
+        max-width: 1100px;
+        margin: 0 auto;
+      }
+
+      .contactContainer > div {
+        background-color: white;
+        border-radius: 12px;
+        box-shadow: 0 10px 25px rgba(0, 0, 0, 0.08);
+        padding: 24px;
+      }
+
+      .contactContainer h2,
+      .formContainer h2 {
+        margin-bottom: 14px;
+        font-size: clamp(1.4rem, 2.5vw, 2rem);
+      }
+
+      .locationItem,
+      .telItem,
+      .nameItem {
+        font-size: 1.05rem;
+        line-height: 1.8;
+      }
+
+      .formContainer {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        padding: 40px 24px;
+        max-width: 820px;
+        margin: 0 auto 40px;
+        gap: 16px;
+      }
+
+      .formContainer label {
+        font-size: 1rem;
+        font-weight: 600;
+      }
+
+      .formContainer input[type="email"],
+      .formContainer textarea {
+        width: 100%;
+        max-width: 740px;
+        margin: 8px 0 20px;
+        padding: 14px 16px;
+        font-size: 1rem;
+        border: 1px solid #ccc;
+        border-radius: 8px;
+        background-color: #fff;
+        color: #111;
+      }
+
+      .formContainer textarea {
+        min-height: 180px;
+        resize: vertical;
+      }
+
+      .formContainer input[type="submit"] {
+        width: 100%;
+        max-width: 320px;
+        background-color: peru;
+        color: white;
+        border: none;
+        cursor: pointer;
+        padding: 14px 32px;
+        font-size: 1.05rem;
+        border-radius: 8px;
+        transition: all 0.25s ease;
+      }
+
+      .formContainer input[type="submit"]:hover {
+        background-color: darkgoldenrod;
+      }
+
+      footer {
         background-color: #34495e;
         text-align: center;
         border-top: 3px solid peru;
-        padding: 30px 40px;
-    }
-    .contact-info {
-        font-size: 1.2rem;
-        line-height: 2;
-        color: white;
-    }
+        padding: 28px 24px;
+      }
 
-    .contact-info a {
+      .contact-info {
+        font-size: 1rem;
+        line-height: 1.8;
+        color: white;
+        max-width: 760px;
+        margin: 0 auto;
+      }
+
+      .contact-info a {
         color: #3498db;
         text-decoration: none;
-    }
+      }
 
-    .contact-info a:hover {
+      .contact-info a:hover {
         text-decoration: underline;
-    }
+      }
 
-    .formContainer {
-      display: flex;
-      flex-direction: column;
-      align-items:center;
-      padding: 50px 40px;
-    }
-
-    .formContainer input[type="email"],
-    .formContainer textarea,
-    .formContainer input[type="submit"] {
-      margin: 10px 0;
-      padding: 10px;
-      font-size: 1rem;
-    }
-
-    .formContainer input[type="submit"] {
-      background-color: peru;
-      color: white;
-      border: none;
-      cursor: pointer;
-      padding: 10px 30px;
-      font-size: 1.1rem;
-      border-radius: 5px;
-      transition: all 0.3s ease;
-    }
-
-    .formContainer input[type="submit"]:hover {
-      background-color: darkgoldenrod;
-    }
-
-    @media (max-width: 768px) {
+      @media (max-width: 900px) {
         .header-container {
-            flex-direction: column;
-            text-align: center;
-            padding: 20px;
+          padding: 20px 18px;
         }
-        
-        .logo-section {
-            flex-direction: column;
-            margin-bottom: 20px;
-        }
-        
+
         .logo-text {
-            font-size: 2.5rem;
+          font-size: 2.4rem;
         }
-        
-        .nav-list {
-            flex-direction: column;
+
+        .full-name {
+          font-size: 1.3rem;
         }
-        
+
+        .motto {
+          max-width: 320px;
+        }
+
         .nav-list li a {
-            padding: 12px;
+          padding: 10px 14px;
+          font-size: 0.98rem;
         }
-    }
+      }
+
+      @media (max-width: 680px) {
+        .header-container {
+          justify-content: center;
+        }
+
+        .logo-text {
+          font-size: 2rem;
+        }
+
+        .company-name {
+          min-width: unset;
+        }
+
+        .contactContainer {
+          padding: 24px 16px;
+        }
+
+        .formContainer {
+          padding: 28px 16px;
+        }
+      }
+
+      @media (max-width: 520px) {
+        .nav-list {
+          flex-direction: column;
+          gap: 6px;
+        }
+
+        .nav-list li a {
+          padding: 10px 12px;
+          font-size: 0.95rem;
+        }
+
+        .formContainer input[type="email"],
+        .formContainer textarea {
+          padding: 12px 14px;
+        }
+
+        .formContainer input[type="submit"] {
+          padding: 14px 20px;
+        }
+      }
     </style>
 </head>
 
@@ -230,11 +316,10 @@
     <!-- NAVIGATION -->
     <nav class="main-nav">
         <ul class="nav-list">
-            <li><a href="Tana.html">Home</a></li>
-            <li><a href="Tana.html#services">Services</a></li>
-            <li><a href="Tana.html#packages">Packages</a></li>
+            <li><a href="index.html">Home</a></li>
+            <li><a href="services.html">Services</a></li>
             <li><a href="TCClogIn.html">Log In</a></li>
-            <li><a href="Tana.html#about">About Us</a></li>
+            <li><a href="index.html#about">About Us</a></li>
             <li><a href="contact.html">Contact Us</a></li>
         </ul>
     </nav>
