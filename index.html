@@ -54,19 +54,12 @@
             justify-content: center;
         }
 
-        .logo-text {
-            font-family: cursive;
-            font-size: clamp(2rem, 4vw, 3rem);
-            font-weight: bold;
-            color: white;
-            letter-spacing: 3px;
-            white-space: nowrap;
-        }
-
-        .logo-text span {
-            display: inline-block;
-            padding: 5px;
-        }
+        .logo-image {
+    width: 90px;          /* adjust size as needed */
+    height: 80px;         /* must be equal to width for a perfect circle */
+    border-radius: 50%;   /* this makes it a circle */
+    object-fit: cover;    /* ensures the image fills the circle without stretching */
+    }
 
         .company-name {
             display: flex;
@@ -384,9 +377,7 @@
     <!-- FIXED HEADER SECTION -->
     <div class="header-container">
         <div class="logo-section">
-            <div class="logo-text">
-                <span class="t">T</span><span class="c1">C</span><span class="c2">C</span>
-            </div>
+            <img src="logo.jpg" alt="Tax Compliance Chiefs Logo" class="logo-image">
             <div class="company-name">
                 <div class="full-name">
                     <span>T</span>AX <span>C</span>OMPLIANCE <span>C</span>HIEFS
