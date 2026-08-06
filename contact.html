@@ -332,20 +332,21 @@
     </div>
 
     <!-- INQUIRY FORM -->
-    <form class="formContainer" action="#tbd" method="POST">
-        <h2>Send us a Message</h2>
-        <div class="eml">
-            <label for="email">Email:</label><br>
-            <input id="email" type="email" name="email" required>
-        </div>
-        <div class="txt">
-            <label for="inquiry">Message:</label><br>
-            <textarea name="inquiry" id="inquiry" rows="10" cols="50" placeholder="Enter your inquiry here"></textarea>
-        </div>
-        <div class="sbt">
-            <input type="submit" value="Send Message">
-        </div>
-    </form>
+    <form class="formContainer" action="#" method="POST" netlify>
+    <input type="hidden" name="form-name" value="contact" />
+    <h2>Send us a Message</h2>
+    <div class="eml">
+        <label for="email">Email:</label><br>
+        <input id="email" type="email" name="email" required>
+    </div>
+    <div class="txt">
+        <label for="inquiry">Message:</label><br>
+        <textarea name="inquiry" id="inquiry" rows="10" cols="50" placeholder="Enter your inquiry here"></textarea>
+    </div>
+    <div class="sbt">
+        <input type="submit" value="Send Message">
+    </div>
+</form>
     
     <!-- FOOTER -->
     <footer>
